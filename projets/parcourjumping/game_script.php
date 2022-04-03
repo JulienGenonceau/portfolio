@@ -5,12 +5,7 @@
 
 session_start();
 
-try {
-    $dbh = new PDO('mysql:host=localhost;dbname=parcourjumping', 'root', '');
-} catch (PDOException $e) {
-    print "Erreur !: " . $e->getMessage() . "<br/>";
-    die();
-}
+include 'db.php';
 
 $playerID = $_POST['player_id'];
 $playerName = $_POST['player_name'];

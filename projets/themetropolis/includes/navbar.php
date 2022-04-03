@@ -1,6 +1,5 @@
-<?php 
+<?php
 $showOriginalNavBar = true;
-
 if (isset($_SESSION['login'])) {
   $showOriginalNavBar = false;
 }
@@ -55,6 +54,7 @@ if ($showOriginalNavBar){
 </div>
 <script src="js/script_navbar.js"></script>
 <?php
+
 
 include "includes/search.php";
 

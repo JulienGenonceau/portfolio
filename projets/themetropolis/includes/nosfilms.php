@@ -1,4 +1,7 @@
-<?php include 'navbar.php';?>
+<?php
+include 'navbar.php';
+?>
+
 
 <div class="carousel" id="carouselTopPage">
 <?php

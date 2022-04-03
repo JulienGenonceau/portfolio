@@ -11,7 +11,7 @@ $mdp = $_POST['mdp'];
 
 //get bdd
 // Create connection
-$conn = new mysqli("localhost", "root", "", "metropolis");
+$conn = new mysqli("localhost", "root", "", "portfolio");
 // Check connection
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);

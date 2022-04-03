@@ -10,7 +10,7 @@ if(isset($_POST['pseudo']) && isset($_POST['mdp']) && isset($_POST['mdp'])){
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "metropolis";
+$dbname = "portfolio";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

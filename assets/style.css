@@ -1,0 +1,131 @@
+*{
+    color: white !important;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    min-height: 100vh;
+}
+
+#tabs{
+    display: flex;
+    width: 50%;
+    max-width: 900px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.tab{
+    min-height: 50px;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    cursor: pointer;
+    text-align: center;
+    transition: text-shadow 0.2s;
+    font-size: 20px;
+}
+
+.tab:hover{
+    text-shadow: 0px 0px 5px white;
+}
+
+.tabIndicator{
+    height: 2px;
+    background-color: rgb(44, 47, 212);
+    position: absolute;
+    width: 30%;
+    top: 100%;
+}
+
+#tab_display{
+    width: 80%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel{
+    height: 100%;
+}
+.carousel .carousel-item {
+    margin-top: -10vh;
+    width:35% !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo_cv{
+    margin-top: 5vh;
+    height: 22vh;
+    width: 15vw;
+    background-size: contain;
+    background-image: url(../assets/img/moi.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.colonnecv{
+    width: 25%;
+    height: 100%;
+    border: solid black 1px;
+    margin: 2px;
+    padding: 2px;
+}
+
+.cv_name{
+    margin-top: 10vh;
+    width: 100%;
+    text-align: left;
+    font-size: 45px;
+    font-weight: 500 !important;
+}
+
+
+.cv_metier{
+    width: 100%;
+    text-align: left;
+    font-size: 25px;
+    font-weight: 400 !important;
+}
+
+.cv_lefttitle{
+    margin-top: 5vh;
+    width: 100%;
+    text-align: left;
+    font-size: 25px;
+    font-weight: 400 !important;
+}
+
+.cv_line{
+    margin-top: 1vh;
+    width: 70%;
+    height: 2px;
+    background-color: white;
+    margin-bottom: 2vh;
+}
+
+.cv_lefttext{
+
+}
+
+.cv_righttitle{
+    margin-top: 5vh;
+    width: 100%;
+    text-align: left;
+    font-size: 30px;
+    font-weight: 700 !important;
+    margin-bottom: 2vh;
+}
+
+.cv_righttitle.first{
+    margin-top: 13vh;
+}

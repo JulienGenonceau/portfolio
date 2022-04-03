@@ -27,7 +27,7 @@ if (isset($_SESSION['login'])) {
 
 // ouverture de la connexion
 
-$dsn = 'mysql:host=localhost;dbname=metropolis';
+$dsn = 'mysql:host=localhost;dbname=portfolio';
 $username = 'root';
 $password = '';
 $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');

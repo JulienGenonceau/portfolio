@@ -2,12 +2,7 @@
 
 $playerId = $_POST["user_id"];
 
-try {
-    $dbh = new PDO('mysql:host=localhost;dbname=parcourjumping', 'root', '');
-} catch (PDOException $e) {
-    print "Erreur !: " . $e->getMessage() . "<br/>";
-    die();
-}
+include 'db.php';
 
 echo "<div class=invisible>";
 
