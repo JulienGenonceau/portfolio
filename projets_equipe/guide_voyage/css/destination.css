@@ -1,0 +1,487 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Nav bar */
+
+header{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    padding: 20px 10px;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.logo{
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-decoration: none;
+    margin-left: -100px;
+}
+
+.logo span{
+    color: #105ccea6;
+    font-size: 1.2em;
+    
+}
+
+.navbar {
+    display: flex;
+    position: relative;
+
+   
+}
+
+.navbar li{
+    list-style: none;
+}
+.navbar a{
+    color: #fff;
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 700;
+}
+
+.btn-reserve{
+    padding: 10px 20px;
+    background: #1f86fba6;
+   margin-top: -10px;
+   text-transform:uppercase ;
+}
+
+.btn-reserve:hover{
+    background-color: #105ccea6;
+    transition: ease-out;
+}
+
+header .navbar li a:hover{
+    color: #105ccea6;
+    border-bottom: 2px solid #105ccea6;
+}
+
+
+
+header.sticky{
+    background: #fff;
+    padding: 10px 10px;
+    box-shadow: 0px 5px 20px rgba(0,0,0, 0.05);
+}
+
+header.sticky .logo{
+    color: #000;
+}
+
+header.sticky .navbar li a {
+    color: #000;
+}
+
+header.sticky li a:hover{
+    color: #105ccea6;
+    border-bottom: 2px solid #105ccea6;
+}
+
+/* header sticky */
+
+
+/* fin nav bar   */
+
+body{
+    background-color: rgb(221, 227, 235);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+#slider{
+    overflow: hidden;
+    min-height: 175px;
+}
+
+#slider figure{
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
+}
+#slider figure img{
+    width: 20%;
+    height: 45vh;
+    min-height: 175px;
+    float: left;
+    margin: auto;
+    object-fit: cover;
+}
+
+@keyframes slider{
+    0%{
+        left: 0;
+    }
+    20%{
+        left: 0;
+    }
+    25%{
+        left: -100%;
+    }
+    45%{
+        left: -100%;
+    }
+    50%{
+        left: -200%;
+    }
+    70%{
+        left: -200%;
+    }
+    75%{
+        left: -300%;
+    }
+    95%{
+        left: -300%;
+    }
+    100%{
+        left: -400%;
+    }
+    
+}
+
+.blackmask{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 45vh;
+    min-height: 175px;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.5;
+}
+
+
+.banniere{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 45vh;
+    min-height: 175px;
+    overflow: hidden;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pays_nom{
+    position: relative;
+    color: white;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    font-size: clamp(1px, 10vh, 15vw);
+    left: 9.5vw;
+    top: 20%;
+}
+.pays_desc{
+    position: absolute;
+    color: white;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    font-size: 2vh;
+    max-height: 37%;
+    width: 60%;
+    bottom: 10%;
+    left: 10vw;
+}
+
+.btn_go{
+    position: absolute;
+    bottom: 12%;
+    right: 10vw;
+    background-color: rgb(49, 147, 226);
+    color: white;
+    border-radius: 0.5vh;
+    outline: none;
+    border: none;
+    width: 10vh;
+    height: 12%;
+    font-size: 2.5vh;
+    box-shadow: 2px 2px 15px rgb(0, 0, 0,0.5);
+    min-width: 5%;
+}
+
+.cadre_plusdinfo{
+    margin: auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    height: 25vh;
+    min-height: 500px;
+    width: 80%;
+    max-width: 1200px;
+    border-radius: 3vh;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.39);
+    overflow: hidden;
+    justify-content: center;
+    background-color: white;
+}
+
+.cardre_plusdinfo_part1{
+width: 100%;
+height: 100%;
+display: inline-block;
+justify-content: center;
+border-radius: 15px;
+}
+.cardre_plusdinfo_part2{
+width: 100%;
+height: 100%;
+flex-direction: column;
+justify-content: center;
+position: relative;
+border-radius: 15px;
+}
+
+.cardre_plusdinfo_part2_contenaire_infos{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    border-radius: 15px;
+    }
+
+
+
+    .btn_reserver{
+        background-color: rgb(49, 147, 226);
+        color: white;
+        border-radius: 0.5vh;
+        outline: none;
+        border: none;
+        width: 20%;
+        height: 10%;
+        font-size: 2.5vh;
+        box-shadow: 2px 2px 15px rgb(0, 0, 0,0.5);
+        min-width: 13vh;
+        position: relative;
+        top: 6.5%;
+        left: 40%;
+    }
+    .btn_reserver:hover{
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+
+.debug{
+    color: rgba(0, 0, 0, 0);
+}
+
+.box_image_showing{
+    overflow: hidden;
+    height: 70%;
+    width: 90%;
+    margin: 5%;
+    margin-bottom: 3%;
+    border-radius: 1vh;
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.39);
+}
+
+.infos_img_showing{
+    object-fit: cover;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.swipeBar{
+    width: 80%;
+    margin-left: 10%;
+    height: 12%;
+    display: flex;
+}
+
+.arrowleft{
+    margin: auto;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent; 
+    
+    border-right: 15px solid rgb(0, 0, 0,0.2);
+    transition: all .2s ease-in-out;
+}
+.arrowright{
+    margin: auto;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent; 
+    
+    border-left: 15px solid rgb(0, 0, 0,0.2);
+    transition: all .2s ease-in-out;
+}
+
+.arrowleft:hover { transform: scale(1.5); }
+.arrowright:hover { transform: scale(1.5);}
+
+.swipe_btn{
+    margin: auto;
+    width: 4%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10vw;
+    display: inline-block;
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 1.0);
+    transition: all .2s ease-in-out;
+}
+.swipe_btn:hover { transform: scale(1.5);}
+.swipe_btn::before{
+    content: "";
+    float: left;
+    padding-top: 100%;
+}
+
+.point_fort_point{
+    width: 2%;
+    background: rgba(0, 0, 0, 0.445);
+    margin: auto;
+    border-radius: 100px;
+    margin-left: 5%;
+}
+.point_fort_point:before{
+    content: "";
+    float: left;
+    padding-top: 100%;
+}
+
+.point_fort_text{
+    width: 85%;
+    font-size: min(2.65vw, 1.7vh);
+    color: rgba(0, 0, 0, 0.529);
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.section_autres_destinations{
+    margin-top: 15%;
+    background-image: url(../img/sky2.png);
+    object-fit: cover;
+    background-size: cover;
+    height: 60vh;
+    min-height: 40vw;
+}
+
+.text_autres_destinations{
+    height: 9vw;
+    background-color: rgba(255, 255, 255, 0.267);
+    font-weight: 500;
+    color: white;
+    font-size: min(6vw, 20vh);
+    text-align: center;
+    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.wrapper{
+    position: relative;
+    width: 100%;
+    height: 70%;
+    margin-top: -9vw;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: scroll;
+    transition: all 0.2s;
+    transform: scale(1) translateY(40%);
+    cursor: grab;
+}
+
+.wrapper.active{
+    transform: scale(1.02) translateY(40%);
+    cursor: grabbing;
+}
+
+.wrapper::-webkit-scrollbar{
+    width: 0;
+}
+
+.wrapper.active::-webkit-scrollbar{
+    width: 0;
+}
+
+.pays_autres_destinations{
+    min-width: 50vh;
+    margin: 5px;
+    height: 95%;
+    margin-left: 5%;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0, 34, 128, 0.3) 0%, rgba(255,255,255,0) 100%);
+
+    display: inline-block;
+    border-radius: 4vh;
+    transition: all .2s ease-in-out;
+}
+
+.pays_autres_destinations:hover{
+    transform: scale(1.005);
+
+}
+
+.pays_autres_destinations_name{
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: clamp(1px, 5vh, 15vw);
+    font-weight: 900;
+}
+
+.pays_autres_destinations_img{
+    display: flex;
+    margin: auto;
+    border-radius: 1vh;
+    left: 5%;
+    width: 90%;
+    height: 65%;
+    object-fit: cover;
+}
+
+.pays_autres_destinations_img2{
+    display: flex;
+    position: relative;
+    margin: auto;
+    border-radius: 1vh;
+    width: 90%;
+    height: 65%;
+    top: -65%;
+    opacity: 0.0;
+    background-color: red;
+    object-fit: cover;
+}
+
+.pays_autres_destinations_btn{
+    position: relative;
+    background-color: rgb(49, 147, 226);
+    color: white;
+    border-radius: 0.5vh;
+    outline: none;
+    border: none;
+    width: 30%;
+    height: 10%;
+    font-size: 2.5vh;
+    box-shadow: 2px 2px 15px rgb(0, 0, 0,0.5);
+    min-width: 5%;
+    left: 35%;
+    top: -60%;
+    transition: all .2s ease-in-out;
+}
+
+.pays_autres_destinations_btn:hover{
+    cursor: pointer;
+    border: solid 1px;
+    border-color: rgb(255, 255, 255);
+    transform: scale(1.1);
+}

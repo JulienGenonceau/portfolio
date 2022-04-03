@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#playerList{
+    position: absolute;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 7vh;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.349);
+    border-radius: 5px;
+    width: 300px;
+    z-index: 9999;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#gameContainer{
+    margin-top: 10vh;
+    width: 90%;
+    height: 70vh;
+    border: solid 1px black;
+    border-radius: 5px;
+    position: relative;
+}
+
+.invisible{
+    display: none;
+}
+
+.joueur{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: blue;
+    border-radius: 50%;
+}
+.currentPlayerID{
+    display: none;
+}
+.pseudo{
+    width: 100px;
+    height: 15px;
+    margin-bottom: 23px;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page_title"></title>
+    <link rel="stylesheet" type="text/css" href="./css/destination.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <a href="./index.html" class="logo">Travala<span> Guide</span></a>
+    <div class="menuToggle" onclick="toggleMenu();"></div>
+    <ul class="navbar">
+        <li><a href="./index.html#banniere" onclick="toggleMenu();">Accueil</a></li>
+        <li><a href="./index.html#apropos" onclick="toggleMenu();">À propos de nous</a></li>
+        <li><a href="./index.html#menu" onclick="toggleMenu();">Guide destination</a></li>
+        <li><a href="./index.html#expert" onclick="toggleMenu();">Site Partenaire</a></li>
+        <li><a href="./index.html#temoignage" onclick="toggleMenu();">Avis</a></li>
+        <li><a href="./index.html#contact" onclick="toggleMenu();">Conctactez-nous</a></li>
+        <a href="#" class="btn-reserve"onclick="toggleMenu();">Inscription  Connexion</a>
+    </ul>
+  </header>
+    <div id="slider">
+        <figure>
+            <img id="img1">
+            <img id="img2">
+            <img id="img3">
+            <img id="img4">
+            <img id="img5">
+        </figure>
+    <div class="blackmask"></div>
+  </div>
+
+  <section class="banniere">
+    <div class="pays_container"></div>
+    <h1 class="pays_nom" id="pays_name"></h1>
+        <h3 class="pays_desc" id="pays_description">
+        </h3>
+      <button type="button" class="btn_go">GO</button>
+  </section>
+    
+
+
+
+  <div id="debug" class="debug"> bonjour </div>
+  <section class="cadre_plusdinfo" id="cadre_plusdinfo">
+
+    <div class="cardre_plusdinfo_part1" id="cardre_plusdinfo_part1">
+      <div class="box_image_showing">
+        <img id="infos_img_showing" class="infos_img_showing">
+     </div>
+
+     <div class="swipeBar">
+      <div class="arrowleft" id="arrowleft"></div>
+                <div class="swipe_btn" id="sb1"></div>
+                <div class="swipe_btn" id="sb2"></div>
+                <div class="swipe_btn" id="sb3"></div>
+                <div class="swipe_btn" id="sb4"></div>
+      <div class="arrowright" id="arrowright"></div>
+     </div>
+
+    </div>
+
+    <div class="cardre_plusdinfo_part2" id="cardre_plusdinfo_part2"></div>
+
+  </section>
+
+  <section class="section_autres_destinations">
+
+    <div class="text_autres_destinations">AUTRES DESTINATIONS</div>
+
+    <div class="wrapper" id="wrapperid"></div>
+
+  </section>
+
+
+
+
+<script src="./js/destination.js">
+</script>  
+  
+  <!-- script JS barre de navigation  -->
+<script type="text/javascript">
+    window.addEventListener('scroll', function(){
+        const header =document.querySelector('header');
+        header.classList.toggle("sticky", window.scrollY > 0 );
+    });
+  
+    function toggleMenu(){
+        const tmenuToggle = document.querySelector('.menuToggle');
+        const navbar = document.querySelector('.navbar');
+        navbar.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+    }
+</script>
+</body>
+
+
+
+</html>
