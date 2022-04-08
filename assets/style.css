@@ -46,7 +46,7 @@ body{
 
 #tab_display{
     width: 80%;
-    height: 70vh;
+    height: 73vh;
     display: flex;
     justify-content: center;
 }
@@ -82,10 +82,10 @@ body{
 }
 
 .cv_name{
-    margin-top: 10vh;
+    margin-top: 8vh;
     width: 100%;
     text-align: left;
-    font-size: 45px;
+    font-size: 4vh;
     font-weight: 500 !important;
 }
 
@@ -93,7 +93,7 @@ body{
 .cv_metier{
     width: 100%;
     text-align: left;
-    font-size: 25px;
+    font-size: 3vh;
     font-weight: 400 !important;
 }
 
@@ -101,7 +101,7 @@ body{
     margin-top: 5vh;
     width: 100%;
     text-align: left;
-    font-size: 25px;
+    font-size: 3vh;
     font-weight: 400 !important;
 }
 
@@ -121,11 +121,11 @@ body{
     margin-top: 5vh;
     width: 100%;
     text-align: left;
-    font-size: 30px;
+    font-size: 3vh;
     font-weight: 700 !important;
     margin-bottom: 2vh;
 }
 
 .cv_righttitle.first{
-    margin-top: 13vh;
+    margin-top: 13.5vh;
 }

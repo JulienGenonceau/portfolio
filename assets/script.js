@@ -7,9 +7,15 @@ class projet {
 }
 
 var liste_projetspersos = [
-  new projet("Metropolis", "assets/img/metropolis.png", "themetropolis"),
   new projet("Onyx Workout", "assets/img/onyxworkout.png", "onyxworkout"),
-  new projet("Jeu multijoueur", "assets/img/multijoueur.png", "parcourjumping")
+  new projet("Metropolis", "assets/img/metropolis.png", "themetropolis"),
+  new projet("SimplonFit2000", "assets/img/simplonfit2000.png", "SimplonFit2000")
+]
+
+var liste_projetsequipe = [
+  new projet("Guide voyage", "assets/img/avion.png", "guide_voyage"),
+  new projet("Pêche n' co", "assets/img/pechenco.png", "pechenco"),
+  new projet("Snake Pôle Nord", "assets/img/snake.png", "snakepolenord")
 ]
 
 var tabID = 1
@@ -67,11 +73,11 @@ function create_page(tabID, animated){
   }
 
   if (tabID == 1){
-    create_page_mes_projets()
+    create_page_projets(self.liste_projetspersos)
   }
 
   if (tabID == 2){
-    create_page_mes_projets()
+    create_page_projets(self.liste_projetsequipe)
   }
 
 }
@@ -101,14 +107,14 @@ function initCarousel(){
   });
 }
 
-function create_page_mes_projets(){
+function create_page_projets(list){
 
   
   const carouselContainer = document.createElement("div")
   carouselContainer.className = "carousel"
   tab_display.appendChild(carouselContainer)
 
-  self.liste_projetspersos.forEach(element => {
+  list.forEach(element => {
     
     const item = document.createElement("a")
     item.className = "carousel-item"
@@ -152,16 +158,15 @@ function create_page_cv(){
   
   colonne_add(colonne1,"cv_lefttitle", "À PROPOS DE MOI")
   colonne_add(colonne1,"cv_line")
-  colonne_add(colonne1,"cv_lefttext", "J'aime l'alcool")
+  colonne_add(colonne1,"cv_lefttext", "J'aime le code")
 
   //COLONE 2
   
   colonne_add(colonne2,"cv_name", "JULIEN GENONCEAU")
   colonne_add(colonne2, "cv_metier", "Developpeur web")
   
-  colonne_add(colonne2,"cv_righttitle first", "MON EXPERIENCE")
+  colonne_add(colonne2,"cv_righttitle first", "LANGUAGES")
   colonne_add(colonne2,"cv_lefttext", "Javascript / Jquery<br>Swift<br>Php<br>HTML / CSS")
-  colonne_add(colonne2,"cv_lefttext", "<br><br>En vrai, j'ai pas fais grand chose pour l'instant, j'ai eu 0 metier")
 
 }
 

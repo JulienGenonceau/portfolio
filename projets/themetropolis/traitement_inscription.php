@@ -7,16 +7,26 @@ if(isset($_POST['pseudo']) && isset($_POST['mdp']) && isset($_POST['mdp'])){
     $mail = $_POST['mail'];
     $mdp = $_POST['mdp'];
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "portfolio";
+    $servername = "db5006773180.hosting-data.io";
+    $username = "dbu725647";
+    $password = "S6mV22za";
+    $dbname = "dbs5603791";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "portfolio";
+  
+  $conn = new mysqli($servername, $username, $password, $dbname);
+
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  }
 }
 
 // Verifier que l'adresse n'est pas déjà prise

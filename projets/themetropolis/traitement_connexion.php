@@ -11,12 +11,21 @@ $mdp = $_POST['mdp'];
 
 //get bdd
 // Create connection
-$conn = new mysqli("localhost", "root", "", "portfolio");
+$conn = new mysqli("db5006773180.hosting-data.io", "dbu725647", "S6mV22za", "dbs5603791");
 // Check connection
 if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+
+  
+  $conn = new mysqli("localhost", "root", "", "portfolio");
+
+  if ($conn->connect_error) {
+    die("Connection locale failed: " . $conn->connect_error);
+  }else{
+    echo "Bdd locale trouvée<br><br>";
+  }
+  ;
 }else{
-    echo "Bdd trouvée<br><br>";
+    echo "Bdd en ligne trouvée<br><br>";
 }
 $sql = "SELECT user_name, user_mail, user_password, role_id FROM users";
 $result = $conn->query($sql);
@@ -61,8 +70,8 @@ if ($maillookingfor==$mail){
         $_SESSION["login"]=true;
         $_SESSION["pseudo"]=$pseudo;
         
-       // echo "<script> window.location.replace('index.php') </script>";
-       header('Location: index.php');
+        echo "<script> window.location.replace('index.php') </script>";
+       //header('Location: index.php');
 
     } else {
         echo ("Ce n'est pas le bon mot de passe");

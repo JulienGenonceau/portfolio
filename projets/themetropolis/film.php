@@ -27,12 +27,23 @@ if (isset($_SESSION['login'])) {
 
 // ouverture de la connexion
 
-$dsn = 'mysql:host=localhost;dbname=portfolio';
-$username = 'root';
-$password = '';
+try {
+
+$dsn = 'mysql:host=db5006773180.hosting-data.io;dbname=dbs5603791';
+$username = 'dbu725647';
+$password = 'S6mV22za';
 $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
 $db = new PDO($dsn, $username, $password, $options);
-// création de la requête
+
+}catch(PDOException $e){
+
+    $dsn = 'mysql:host=localhost;dbname=portfolio';
+    $username = 'root';
+    $password = '';
+    $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
+    $db = new PDO($dsn, $username, $password, $options);
+
+}
 
 $film;
 
