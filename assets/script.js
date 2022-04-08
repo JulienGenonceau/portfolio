@@ -63,6 +63,7 @@ function setPage(tabID, animated){
 }
 
 function create_page(tabID, animated){
+  currentItemID = 0;
 
   tab_display.style.opacity = 0
   var delayInMilliseconds = 400
