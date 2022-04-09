@@ -56,7 +56,7 @@ body{
 
 .carousel{
     height: 50%;
-    margin-top: 5vh;
+    margin-top: 2vh;
 }
 .carousel .carousel-item {
     margin-top: 0vh;
@@ -137,7 +137,7 @@ body{
     width: 5vw;
     height:7vh;
     position: absolute;
-    margin-top: 23vh;
+    margin-top: 20vh;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -159,11 +159,31 @@ body{
 
 #projectTitle{
     position: absolute;
-    margin-top: 50vh;
+    margin-top: 44vh;
 }
 
 #projectDesc{
     position: absolute;
-    margin-top: 60vh;
+    margin-top: 51vh;
     font-size: 2vh;
+    width: 50%;
+    letter-spacing: 3px;
+    line-height: 3vh;
+    text-align: center;
+}
+
+#btnVoirLeSite{
+    position: absolute;
+    width: 20%;
+    background-color: rgb(44, 44, 206);
+    text-align: center;
+    padding: 1.7vh;
+    margin-top: 71vh;
+    font-size: 1.5vh;
+    letter-spacing: 5px;
+    cursor: pointer;
+    transition: 1s;
+}
+#btnVoirLeSite:hover{
+    letter-spacing: 7px;
 }

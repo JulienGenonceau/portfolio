@@ -9,20 +9,21 @@ class projet {
 
 var currentItemList = new Array();
 var currentItemID = 0;
+const btnVoirLeSite = document.createElement("a")
 
 var intervalSwipe = setInterval(function(){
 }, 0); clearInterval(intervalSwipe);
 
 var liste_projetspersos = [
-  new projet("Onyx Workout", "assets/img/onyxworkout.png", "onyxworkout", "Onyx Workout est une application téléphone"),
-  new projet("Metropolis", "assets/img/metropolis.png", "themetropolis", "Site de streaming"),
-  new projet("SimplonFit2000", "assets/img/simplonfit2000.png", "SimplonFit2000", "Site de sport")
+  new projet("Onyx Workout", "assets/img/onyxworkout.png", "onyxworkout", "Onyx Workout est une application de musculation qui m'a permis de maîtriser la programmation orientée objet. On y retrouve un système d'entraînement et de programme interactif, une possibilité de suivre son alimentation, et des cours sur le fonctionnement du corps humain orientés sur la prise de muscle et la perte de graisse"),
+  new projet("Metropolis", "assets/img/metropolis.png", "themetropolis", "Ce projet fictif a été pour moi une introduction pratique à la base de données, aux requêtes SQL, PDO, et le back-end en général (inscription-connexion, lecture de vidéos classées par catégories, ..)"),
+  new projet("SimplonFit2000", "assets/img/simplonfit2000.png", "SimplonFit2000", "Projet de début d'année orienté front-end, qui m'a permis de découvrir plusieurs fonctionnalités intéressantes du css / js comme le parallax et l'intégration vidéo")
 ]
 
 var liste_projetsequipe = [
-  new projet("Guide voyage", "assets/img/avion.png", "guide_voyage", "Site de voyage à travers plusieurs destinations"),
-  new projet("Pêche n' co", "assets/img/pechenco.png", "pechenco", "Un super site de pêche"),
-  new projet("Snake Pôle Nord", "assets/img/snake.png", "snakepolenord", "Jeu vidéo programmé en language objet")
+  new projet("Guide voyage", "assets/img/avion.png", "guide_voyage", "Site de voyage proposant plusieurs destinations, premier projet de l'année, une introduction au html et css"),
+  new projet("Pêche n' co", "assets/img/pechenco.png", "pechenco", "Premier projet demandant une réelle organisation au sein d'une équipe, qui passe par la mise en accord d'une charte graphique, l'utilisation de GitHub (branches, push, merge, ..) et l'entraide"),
+  new projet("Snake Pôle Nord", "assets/img/snake.png", "snakepolenord", "Projet bonus, Jeu vidéo programmé en pur javascript natif, en utilisant nos connaissances")
 ]
 
 var tabID = 1
@@ -165,6 +166,11 @@ currentItemList = list;
   projectDesc.id = "projectDesc"
   projectDesc.innerHTML = list[currentItemID].desc
   tab_display.appendChild(projectDesc)
+
+  btnVoirLeSite.href = "projets/"+list[0].lien+"/index.php"
+  btnVoirLeSite.innerHTML = "VOIR LE SITE"
+  btnVoirLeSite.id = "btnVoirLeSite"
+  tab_display.appendChild(btnVoirLeSite)
 }
 
 intervalSwipe = setInterval(function(){
@@ -198,7 +204,7 @@ function create_page_cv(){
   
   colonne_add(colonne1,"cv_lefttitle", "À PROPOS DE MOI")
   colonne_add(colonne1,"cv_line")
-  colonne_add(colonne1,"cv_lefttext", "J'aime le code")
+  colonne_add(colonne1,"cv_lefttext", "Sportif et motivé pour faire découvrir mon sport, j'ai créé seul en autodidacte un site internet, puis une application de callisthénie. Ayant pris goût au développement informatique, ma motivation s'est transférée vers l'objectif de créer des sites webs et des applications.")
 
   //COLONE 2
   
@@ -222,6 +228,7 @@ function colonne_add(colonne, classname, innertext){
 }
 
 function setProjectTitle(list){
+  
   var temps_anim = 0.5;
 
   var title = document.getElementById("projectTitle")
@@ -230,13 +237,25 @@ function setProjectTitle(list){
   title.style.opacity = 0;
   desc.style.transition = "opacity "+temps_anim+"s"
   desc.style.opacity = 0;
+  btnVoirLeSite.style.transition = "opacity "+temps_anim+"s"
+  btnVoirLeSite.style.opacity = 0;
 
   setTimeout(function(){
     title.innerHTML = list[currentItemID].nom.toUpperCase()
     desc.innerHTML = list[currentItemID].desc
+    btnVoirLeSite.href = "projets/"+list[currentItemID].lien+"/index.php"
     title.style.opacity = 1;
+  }, temps_anim*1150);
+
+  setTimeout(function(){
+    desc.style.transition = "opacity "+temps_anim*4+"s"
     desc.style.opacity = 1;
-  }, temps_anim*1000);
+  }, temps_anim*1450);
+
+  setTimeout(function(){
+    btnVoirLeSite.style.transition = temps_anim*2+"s"
+    btnVoirLeSite.style.opacity = 1;
+  }, temps_anim*1750);
 }
 
 var lastId = 0;
