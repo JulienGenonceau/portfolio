@@ -25,6 +25,14 @@
 
     </section>
 
+    <div id="burger"></div>
+
+    <div id="burgermenu">
+    <div class="tabburger" onclick = "setPage(0, true)">Julien Genonceau</div>
+    <div class="tabburger" onclick = "setPage(1, true)">Mes Projets</div>
+    <div class="tabburger" onclick = "setPage(2, true)">Projets en équipes</div>
+    </div>
+
     <section id="tab_display">
     
 

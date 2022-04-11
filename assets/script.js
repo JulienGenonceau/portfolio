@@ -7,6 +7,10 @@ class projet {
   }
 }
 
+var burger_opened = false;
+const burger = document.getElementById("burger")
+const burgermenu = document.getElementById("burgermenu")
+
 var currentItemList = new Array();
 var currentItemID = 0;
 const btnVoirLeSite = document.createElement("a")
@@ -40,6 +44,9 @@ tabs_container.appendChild(tabIndicator)
 setPage(tabID, false)
 
 function setPage(tabID, animated){
+
+    burger_opened  = false
+    burgermenu.style.display = "none"
 
     self.tabID  = tabID
 
@@ -164,6 +171,7 @@ currentItemList = list;
     item.href = "projets/"+element.lien+"/index.php"
 
     const img = document.createElement("img")
+    img.className = "imgSlide"
     img.src = element.image
     item.appendChild(img)
     sliderResponsive.appendChild(item)
@@ -211,13 +219,18 @@ intervalSwipe = setInterval(function(){
 
 function create_page_cv(){
 
+  const cvcontainer = document.createElement("div")
+  cvcontainer.id = "cvcontainer"
+
   const colonne1 = document.createElement("div")
   colonne1.className  = "colonnecv"
-  tab_display.appendChild(colonne1)
+  cvcontainer.appendChild(colonne1)
 
   const colonne2 = document.createElement("div")
   colonne2.className  = "colonnecv"
-  tab_display.appendChild(colonne2)
+  cvcontainer.appendChild(colonne2)
+
+  tab_display.appendChild(cvcontainer)
 
   //COLONE 1
 
@@ -231,7 +244,7 @@ function create_page_cv(){
   
   colonne_add(colonne1,"cv_lefttitle", "À PROPOS DE MOI")
   colonne_add(colonne1,"cv_line")
-  colonne_add(colonne1,"cv_lefttext", "Sportif et motivé pour faire découvrir mon sport, j'ai créé seul en autodidacte un site internet, puis une application de callisthénie. Ayant pris goût au développement informatique, ma motivation s'est transférée vers l'objectif de créer des sites webs et des applications.")
+  colonne_add(colonne1,"cv_lefttext", "Sportif et motivé pour faire découvrir mon sport, j'ai créé seul en autodidacte un site internet, puis une application de callisthénie. Ayant pris goût au développement informatique, ma motivation m'a amené vers l'objectif de créer des sites webs et des applications.")
 
   //COLONE 2
   
@@ -293,3 +306,13 @@ setInterval(function () {
     setProjectTitle(currentItemList)
   }
 }, 100);
+
+burger.onclick = function(){
+  burger_opened = !burger_opened
+
+  if (burger_opened){
+    burgermenu.style.display  = "flex"
+  }else{
+    burgermenu.style.display  = "none"
+  }
+}
