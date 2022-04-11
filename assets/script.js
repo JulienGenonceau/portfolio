@@ -143,6 +143,33 @@ currentItemList = list;
   initCarousel()
   clearInterval(intervalSwipe)
 
+  
+  const sliderResponsive = document.createElement("div")
+  sliderResponsive.className = "sliderResponsive"
+  tab_display.appendChild(sliderResponsive)
+  
+  $(sliderResponsive).scroll(function (event) {
+    var scroll = $(sliderResponsive).scrollLeft();
+    var pageID = Math.floor(scroll/ (window.innerWidth*0.6))
+    if (pageID != currentItemID){
+      currentItemID = pageID;
+      setProjectTitle(list)
+    }
+  });
+
+  list.forEach(element => {
+    
+    const item = document.createElement("a")
+    item.className = "sliderResponsive-item"
+    item.href = "projets/"+element.lien+"/index.php"
+
+    const img = document.createElement("img")
+    img.src = element.image
+    item.appendChild(img)
+    sliderResponsive.appendChild(item)
+
+  });
+
   const flechegauche = document.createElement("div")
   flechegauche.className = "carouselarrow left"
   tab_display.appendChild(flechegauche)
@@ -170,11 +197,11 @@ currentItemList = list;
   btnVoirLeSite.href = "projets/"+list[0].lien+"/index.php"
   btnVoirLeSite.innerHTML = "VOIR LE SITE"
   btnVoirLeSite.id = "btnVoirLeSite"
-  tab_display.appendChild(btnVoirLeSite)
+  projectDesc.appendChild(btnVoirLeSite)
 }
 
 intervalSwipe = setInterval(function(){
-  if (!$('#tab_display:hover').length != 0) {
+  if (!$('#tab_display:hover').length != 0 && window.innerWidth > 900) {
     $('.carousel').carousel('next');
     setProjectTitle(currentItemList)
 }
@@ -245,6 +272,7 @@ function setProjectTitle(list){
     desc.innerHTML = list[currentItemID].desc
     btnVoirLeSite.href = "projets/"+list[currentItemID].lien+"/index.php"
     title.style.opacity = 1;
+    desc.appendChild(btnVoirLeSite)
   }, temps_anim*1150);
 
   setTimeout(function(){

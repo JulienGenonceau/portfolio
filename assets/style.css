@@ -160,6 +160,7 @@ body{
 #projectTitle{
     position: absolute;
     margin-top: 44vh;
+    font-size: clamp(16px, 5vh, 10vw);
 }
 
 #projectDesc{
@@ -170,20 +171,76 @@ body{
     letter-spacing: 3px;
     line-height: 3vh;
     text-align: center;
+    display:inline-block;
+    display: flex;
+    align-items: flex-end;
+    justify-content:center;
+    padding-bottom: 15vh;
+    min-width: 300px;
 }
 
 #btnVoirLeSite{
     position: absolute;
-    width: 20%;
+    width: 50%;
     background-color: rgb(44, 44, 206);
     text-align: center;
     padding: 1.7vh;
-    margin-top: 71vh;
     font-size: 1.5vh;
     letter-spacing: 5px;
     cursor: pointer;
     transition: 1s;
+    transform: translateY(165%);
+    min-width: 200px;
 }
 #btnVoirLeSite:hover{
     letter-spacing: 7px;
+}
+
+@media (max-width: 900px) { 
+    .carousel{
+        display: none;
+    }
+    .carouselarrow{
+        display: none;
+    }
+    #tabs{
+        display: none;
+    }
+    .sliderResponsive{
+        display: flex;
+    }
+}
+
+@media (min-width: 900px) { 
+    .sliderResponsive{
+        display: none;
+    }
+}
+
+.sliderResponsive{
+    position: absolute;
+    width: 100vw;
+    height: 30vh;
+    margin-top: 5vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.sliderResponsive-item{
+    align-items: center;
+    color: white;
+    border: 1px solid black;
+    flex: 0 0 320px;
+    font-size: 40px;
+    justify-content: center;
+    scroll-snap-align: start;
+    margin-left: 50px;
+}
+
+img{
+    object-fit:contain;
+    width: 100%;
+    height: 100%;
 }
